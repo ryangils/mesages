@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Username modal -->
+  <div id="modal-overlay">
+    <div id="modal">
+      <h2>Welcome to Mesages</h2>
+      <p>Choose a username to get started</p>
+      <input id="username-input" type="text" placeholder="Your username" maxlength="32" autofocus />
+      <button id="username-btn">Join</button>
+    </div>
+  </div>
+
+  <div id="app">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div id="server-name">Mesages</div>
+      <div id="channels-label">CHANNELS</div>
+      <ul id="channel-list"></ul>
+      <div id="user-bar">
+        <div id="user-avatar"></div>
+        <span id="user-display"></span>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main id="main">
+      <header id="channel-header">
+        <span id="channel-name-display"># general</span>
+      </header>
+      <div id="messages"></div>
+      <div id="input-area">
+        <input id="msg-input" type="text" placeholder="Message #general" maxlength="2000" disabled />
+        <button id="send-btn" disabled>Send</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
